@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 hover:bg-primary-50 cursor-pointer;
+  }
+  
+  .sidebar-item.active {
+    @apply bg-primary-500 text-white;
+  }
+  
+  .skill-card {
+    @apply bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 cursor-pointer;
+  }
+  
+  .quick-link-card {
+    @apply bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 cursor-pointer hover:scale-105;
+  }
+  
+  .chart-container {
+    @apply bg-white rounded-xl p-6 shadow-sm border border-gray-100;
+  }
+}
